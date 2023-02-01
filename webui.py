@@ -207,7 +207,7 @@ def webui():
         if cmd_opts.gradio_queue:
             shared.demo.queue(64)
 
-        app, local_url, share_url = shared.demo.launch(
+        app, local_url, share_url = shared.demo.launch(share=True)(
             share=cmd_opts.share,
             server_name=server_name,
             server_port=cmd_opts.port,
